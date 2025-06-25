@@ -67,28 +67,36 @@ function showAlert() {
     confirmButtonText: "ok !",
   });
 }
-  
+function existAlert() {
+  Swal.fire({
+    title: "Error!",
+    text: "This email or password isn't correct",
+    icon: "error",
+    confirmButtonText: "ok !",
+  });
+}
+
 function login(state) {
   var user = { e: email.value, p: password.value };
-  var users = JSON.parse(localStorage.getItem('users')) || [];
+  var users = JSON.parse(localStorage.getItem("users")) || [];
   var found = false;
 
   for (var i = 0; i < users.length; i++) {
     if (users[i].e === user.e && users[i].p === user.p) {
       found = true;
       loggedInUser = users[i];
-      
     }
   }
 
   if (state === true && found) {
-   
-     localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-    window.location.href = "./pages/home.html";
+    localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+    window.location.href = "src/pages/home.html";
+  } else if (state === true && !found) {
+    existAlert();
   } else {
     showAlert();
   }
 }
 btn.addEventListener("click", function () {
-    login(validateForm());
-  });
+  login(validateForm());
+});

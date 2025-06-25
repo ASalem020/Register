@@ -115,7 +115,7 @@ function login(state) {
     localStorage.setItem("users", JSON.stringify(users));
     console.log(users);
 
-    window.location.href = "../index.html";
+    window.location.href = "../../index.html";
   }else if(state == true && found){
     showDupAlert()
   }
