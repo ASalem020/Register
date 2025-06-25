@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/output.css" rel="stylesheet" />
+    <title>JS4 Register Form</title>
+  </head>
+  <body>
+    <div
+      class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-slate-700 to-sky-950 px-4 text-white"
+    >
+      <form
+        class="bg-gray-800 p-10 rounded-2xl shadow-2xl w-full max-w-2xl space-y-6"
+      >
+        <h2 class="text-3xl font-bold text-center">Sign up</h2>
+
+       <div>
+            <label for="name" class="block text-sm font-semibold mb-1 text-white"
+                >Name</label
+            >
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter a name"
+                class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+            />
+            </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-1 text-white"
+            >New Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            
+          />
+          <small class="text-red-700 hidden"></small>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-semibold mb-1"
+            > Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            
+          />
+          <small class="text-red-700 hidden"></small>
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-semibold mb-1"
+            >Confirm  Password</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            name="password"
+            placeholder="••••••••"
+            class="w-full px-4 py-3 bg-gray-700 text-white border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            
+          />
+          <small class="text-red-700 hidden"></small>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-3 px-4 bg-blue-800 hover:bg-blue-700 text-white font-semibold rounded-xl transition duration-200"
+        >
+          Sign up
+        </button>
+
+        <p class="inline-block">Already have an account ?</p>
+        <a href="login.html" class="text-blue-700 hover:text-blue-500">Login</a>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/signup.js"></script>
+  </body>
+</html>
