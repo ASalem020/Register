@@ -84,7 +84,7 @@ function login(state) {
   if (state === true && found) {
    
      localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-    window.location.href = "home.html";
+    window.location.href = "./pages/home.html";
   } else {
     showAlert();
   }
